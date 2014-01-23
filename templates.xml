@@ -54,7 +54,7 @@ if (${var} == null) {&#13;
         autoinsert="true"
         context="java-statements"
         deleted="false"
-        description="Android用ログ"
+        description="Log for android"
         enabled="true" >
 ${:import(android.util.Log)}Log.d("${enclosing_type}", "${message}");${cursor}
     </template>
