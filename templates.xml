@@ -18,7 +18,7 @@ if (${var} != null &amp;&amp; ${var}.length() &gt; 0) {&#13;
         autoinsert="true"
         context="java-statements"
         deleted="false"
-        description="if null OR length <= 0"
+        description="if null OR length &lt;= 0"
         enabled="true" >
 if (${var} == null || ${var}.length() &lt;= 0) {&#13;
 	${cursor}&#13;
