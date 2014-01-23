@@ -7,20 +7,18 @@
         context="java-statements"
         deleted="false"
         description="if not null &amp; length > 0"
-        enabled="true" >
-if (${var} != null &amp;&amp; ${var}.length() &gt; 0) {&#13;
+        enabled="true" >if (${var} != null &amp;&amp; ${var}.length() &gt; 0) {&#13;
 	${cursor}&#13;
 }
     </template>
-    
+
     <template
         name="if"
         autoinsert="true"
         context="java-statements"
         deleted="false"
         description="if null OR length &lt;= 0"
-        enabled="true" >
-if (${var} == null || ${var}.length() &lt;= 0) {&#13;
+        enabled="true" >if (${var} == null || ${var}.length() &lt;= 0) {&#13;
 	${cursor}&#13;
 }
     </template>
@@ -31,8 +29,7 @@ if (${var} == null || ${var}.length() &lt;= 0) {&#13;
         context="java-statements"
         deleted="false"
         description="not null check"
-        enabled="true" >
-if (${var} != null) {&#13;
+        enabled="true" >if (${var} != null) {&#13;
 	${cursor}&#13;
 }
     </template>
@@ -43,8 +40,7 @@ if (${var} != null) {&#13;
         context="java-statements"
         deleted="false"
         description="null check"
-        enabled="true" >
-if (${var} == null) {&#13;
+        enabled="true" >if (${var} == null) {&#13;
 	${cursor}&#13;
 }
     </template>
@@ -54,9 +50,35 @@ if (${var} == null) {&#13;
         autoinsert="true"
         context="java-statements"
         deleted="false"
-        description="Log for android"
-        enabled="true" >
-${:import(android.util.Log)}Log.d("${enclosing_type}", "${message}");${cursor}
+        description="Debug Log for android"
+        enabled="true" >${:import(android.util.Log)}Log.d("${enclosing_type}", "${message}");${cursor}
+    </template>
+    
+    <template
+        name="Logi"
+        autoinsert="true"
+        context="java-statements"
+        deleted="false"
+        description="Info Log for android"
+        enabled="true" >${:import(android.util.Log)}Log.i("${enclosing_type}", "${message}");${cursor}
+    </template>
+    
+    <template
+        name="Logw"
+        autoinsert="true"
+        context="java-statements"
+        deleted="false"
+        description="Warn Log for android"
+        enabled="true" >${:import(android.util.Log)}Log.w("${enclosing_type}", "${message}");${cursor}
+    </template>
+
+    <template
+        name="Loge"
+        autoinsert="true"
+        context="java-statements"
+        deleted="false"
+        description="Error Log for android"
+        enabled="true" >${:import(android.util.Log)}Log.e("${enclosing_type}", "${message}");${cursor}
     </template>
 
     <template
@@ -65,8 +87,7 @@ ${:import(android.util.Log)}Log.d("${enclosing_type}", "${message}");${cursor}
         context="java-statements"
         deleted="false"
         description="String.valueOf"
-        enabled="true" >
-String.valueOf(${var})${cursor}
+        enabled="true" >String.valueOf(${var})${cursor}
     </template>
 
 </templates>
