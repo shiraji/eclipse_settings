@@ -1,5 +1,48 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="true" context="java-statements" deleted="false" description="not null check" enabled="true" name="if">if (${var} != null) {&#13;
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<templates>
+
+    <template
+        name="if"
+        autoinsert="true"
+        context="java-statements"
+        deleted="false"
+        description="not null check"
+        enabled="true" >
+if (${var} != null) {&#13;
 	${cursor}&#13;
-}</template><template autoinsert="true" context="java-statements" deleted="false" description="null check" enabled="true" name="if">if (${var} == null) {&#13;
+}
+    </template>
+
+    <template
+        name="if"
+        autoinsert="true"
+        context="java-statements"
+        deleted="false"
+        description="null check"
+        enabled="true" >
+if (${var} == null) {&#13;
 	${cursor}&#13;
-}</template><template autoinsert="true" context="java-statements" deleted="false" description="Android用ログ" enabled="true" name="Logd">${:import(android.util.Log)}Log.d("${enclosing_type}", "${message}");${cursor}</template><template autoinsert="true" context="java-statements" deleted="false" description="String.valueOf" enabled="true" name="strv">String.valueOf(${var})${cursor}</template></templates>
+}
+    </template>
+
+    <template
+        name="Logd"
+        autoinsert="true"
+        context="java-statements"
+        deleted="false"
+        description="Android用ログ"
+        enabled="true" >
+${:import(android.util.Log)}Log.d("${enclosing_type}", "${message}");${cursor}
+    </template>
+
+    <template
+        name="strv"
+        autoinsert="true"
+        context="java-statements"
+        deleted="false"
+        description="String.valueOf"
+        enabled="true" >
+String.valueOf(${var})${cursor}
+    </template>
+
+</templates>
