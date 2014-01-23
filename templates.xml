@@ -6,6 +6,30 @@
         autoinsert="true"
         context="java-statements"
         deleted="false"
+        description="if not null &amp; length > 0"
+        enabled="true" >
+if (${var} != null &amp;&amp; ${var}.length() &gt; 0) {&#13;
+	${cursor}&#13;
+}
+    </template>
+    
+    <template
+        name="if"
+        autoinsert="true"
+        context="java-statements"
+        deleted="false"
+        description="if null OR length <= 0"
+        enabled="true" >
+if (${var} == null || ${var}.length() &lt= 0) {&#13;
+	${cursor}&#13;
+}
+    </template>
+
+    <template
+        name="if"
+        autoinsert="true"
+        context="java-statements"
+        deleted="false"
         description="not null check"
         enabled="true" >
 if (${var} != null) {&#13;
