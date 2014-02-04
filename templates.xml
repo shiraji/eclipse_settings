@@ -100,4 +100,33 @@
 ${:import(play.db.ebean.Model)}
     </template>
 
+    <template
+	autoinsert="true"
+	context="java-members"
+	deleted="false"
+	description="private field"
+	enabled="true"
+	name="private_field">private ${class} ${name};
+    </template>
+
+    <template
+	autoinsert="true"
+	context="java-members"
+	deleted="false"
+	description="constant int"
+	enabled="true"
+	name="private_final_static_int">private final static int ${name} = ${value};&#13;
+	${cursor}
+    </template>
+
+    <template
+	autoinsert="true"
+	context="java-members"
+	deleted="false"
+	description="constant string"
+	enabled="true"
+	name="private_final_static_string">private final static String ${name} = "${value}";&#13;
+	${cursor}
+    </template>
+
 </templates>
